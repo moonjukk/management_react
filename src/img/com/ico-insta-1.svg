@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <g id="ico-insta-1" transform="translate(-2 -2)">
+    <path id="패스_1" data-name="패스 1" d="M3,11C3,7.229,3,5.343,4.172,4.172S7.229,3,11,3h2c3.771,0,5.657,0,6.828,1.172S21,7.229,21,11v2c0,3.771,0,5.657-1.172,6.828S16.771,21,13,21H11c-3.771,0-5.657,0-6.828-1.172S3,16.771,3,13Z" fill="none" stroke="#262626" stroke-width="2"/>
+    <circle id="타원_1" data-name="타원 1" cx="1.5" cy="1.5" r="1.5" transform="translate(15 6)" fill="#262626"/>
+    <circle id="타원_2" data-name="타원 2" cx="3" cy="3" r="3" transform="translate(9 9)" fill="none" stroke="#262626" stroke-width="2"/>
+  </g>
+</svg>

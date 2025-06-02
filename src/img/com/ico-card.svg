@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="22" height="16" viewBox="0 0 22 16">
+  <g id="card" transform="translate(-2 -5)">
+    <rect id="사각형_172" data-name="사각형 172" width="20" height="14" rx="2" transform="translate(3 6)" fill="none" stroke="#262626" stroke-width="2"/>
+    <path id="패스_215" data-name="패스 215" d="M7,15h.01" transform="translate(0.445 0.692)" fill="none" stroke="#262626" stroke-linecap="round" stroke-width="2"/>
+    <path id="패스_216" data-name="패스 216" d="M4,11H23" transform="translate(0 0.385)" fill="none" stroke="#262626" stroke-linecap="round" stroke-width="2"/>
+  </g>
+</svg>

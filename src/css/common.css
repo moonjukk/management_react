@@ -1,0 +1,13 @@
+.adminBody{
+    padding: 0px 20px;
+}
+.adminBody button{
+    margin-top: 6px;
+    margin-right: 10px;
+    background-color: white;
+    border: 1px solid black;
+}
+.adminBody button:hover{
+    background-color: black;
+    color: white;
+}

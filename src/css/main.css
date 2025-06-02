@@ -1,0 +1,55 @@
+.MI-Tit{font-size: var(--font-size-32); font-weight: var(--font-weight-900); text-align: center;}
+.Section-3-Content, .Section-4-Content, .Section-5-Content, .Section-6-Content{margin-top: var(--margin-30);}
+
+/* 2025.05.16 Edit Start */
+.Section-1{width: 100%; height: calc(100vh - 90px); max-width: 430px; padding: var(--padding-90) var(--padding-0) var(--padding-0); margin: 0 auto;}
+/* 2025.05.16 Edit End */
+/* 2025.05.16 Add Start */
+.Section-1 img{width: 100%; height: 100%; object-fit: cover;}
+/* 2025.05.16 Add End */
+/* 2025.05.16 Edit Start */
+/* .Section-1.bg-1{background: url(../../assets/img/Banner-Visual-Bg-1.jpg) no-repeat; background-size: cover;} */
+/* 2025.05.16 Edit End */
+.Section-1-Desc{width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;}
+.Section-1-Desc img{max-width: 314px; margin: 0 auto;}
+
+.Section-2{padding-top: var(--padding-80);}
+
+.Section-3{padding: var(--padding-80) var(--padding-0);}
+.Section-3-Desc{display: grid; gap: 20px; text-align: center; margin-top: var(--margin-30);}
+.Section-3-Part{display: grid; gap: 20px;}
+.Section-3-Part + .Section-3-Part{margin-top: 20px;}
+.Section-3-Box{display: grid; gap: 5px;}
+.Section-3-Part-Tit{font-size: var(--font-size-18); font-weight: var(--font-weight-900);}
+.Section-3-Part-Tit.One{color: var(--color-point-1);}
+.Section-3-Part-Tit.Two{color: var(--color-point-2);}
+.Section-3-Part-Chip{font-size: var(--font-size-12); color: var(--color-dark-1);}
+
+.Section-4{background-color: var(--color-point-1-op-10); padding: var(--padding-80) var(--padding-0);}
+.Section-4 .Com-Btn{margin: 0 auto;}
+.Section-4 .Com-Btn img{width: 96px;}
+
+.Section-5{padding: var(--padding-80) var(--padding-0);}
+.Section-5-Box-Group{display: flex; align-items: center; gap: 20px;}
+.Section-5-Box-Group+.Section-5-Box-Group{margin-top: 20px;}
+.Section-5-Box{width: calc(100% / 2 - 10px)}
+.Section-5-Box-Img{height: 195px; position: relative; border-radius: 10px; overflow: hidden;}
+.Section-5-Box-Img img:nth-child(2){width:100%; height:100%; object-fit:cover;}
+.Section-5-Box-Img .Logo-1{max-width: 24px; position: absolute; top: 10px; left: 10px;}
+.Section-5-Box-Img .Logo-2{max-width: 178px; position: absolute; bottom: 10px; left: 10px;}
+.Section-5-Box-Txt{font-size: var(--font-size-18); font-weight: var(--font-weight-700); margin-top: var(--margin-10); text-align: center;}
+
+.Section-6{background-color: var(--color-point-1); padding: var(--padding-80) var(--padding-0);}
+.Section-6-Box + .Section-6-Box{margin-top: 20px;}
+.Section-6-Box-Img{height: 260px; border-radius: 10px; overflow: hidden;}
+.Section-6-Box-Txt{font-size: var(--font-size-18); font-weight: var(--font-weight-700); margin-top: var(--margin-10); text-align: center;}
+
+.Section-7{padding: var(--padding-80) var(--padding-0);}
+/* 2025.05.19 Edit Start */
+.Section-7-Content{display: grid; align-items: center; grid-template-columns: repeat(3, 1fr); gap: 20px;}
+/* .Section-7-Img-Group{display: flex; align-items: center; gap: 10px;}
+.Section-7-Img-Group + .Section-7-Img-Group{margin-top: 20px;} */
+/* 2025.05.19 Edit End */
+.Section-7-Img{max-width: 130px;}
+
+.Section-8{font-size: var(--font-size-14); padding: var(--padding-40) var(--padding-0); color: var(--color-dark-1); border-top: 1px solid var(--color-dark-3);}

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20">
+  <g id="filter" transform="translate(-3 -4)">
+    <path id="패스_16" data-name="패스 16" d="M12,7h8" transform="translate(4)" fill="none" stroke="#262626" stroke-linecap="round" stroke-width="2"/>
+    <path id="패스_17" data-name="패스 17" d="M4,7H8" fill="none" stroke="#262626" stroke-linecap="round" stroke-width="2"/>
+    <path id="패스_18" data-name="패스 18" d="M17,17h3" transform="translate(4 4)" fill="none" stroke="#262626" stroke-linecap="round" stroke-width="2"/>
+    <path id="패스_19" data-name="패스 19" d="M4,17h8" transform="translate(0 4)" fill="none" stroke="#262626" stroke-linecap="round" stroke-width="2"/>
+    <circle id="타원_32" data-name="타원 32" cx="2" cy="2" r="2" transform="translate(13.333 5) rotate(90)" fill="none" stroke="#262626" stroke-linecap="round" stroke-width="2"/>
+    <circle id="타원_33" data-name="타원 33" cx="2" cy="2" r="2" transform="translate(20 19) rotate(90)" fill="none" stroke="#262626" stroke-linecap="round" stroke-width="2"/>
+  </g>
+</svg>

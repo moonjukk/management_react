@@ -1,0 +1,15 @@
+.Sub-Top{padding-top: var(--padding-90)}
+
+.Sub{padding: var(--padding-40) var(--padding-0);}
+/* .Sub+.Sub{padding-top: var(--padding-0);} */
+.Sub-Grid{display: grid; gap: 20px;}
+.Sub-Tit{font-size: var(--font-size-20); font-weight: var(--font-weight-700);}
+.Sub-Txt{color: var(--color-dark-1);}
+
+.Sub-Txt.Dot{position: relative; padding-left: var(--padding-14);}
+.Sub-Txt.Dot::before{content: ''; width: 4px; height: 4px; min-width: 4px; min-height: 4px; position: absolute; top: 8px; left: 0; border-radius: 50%; background-color: var(--color-point-1);}
+
+.Sub-Line{border-bottom: 1px solid var(--color-light-3);}
+/* 2025.05.16 Add Start */
+.Sub-Line.dot{border-bottom: 1px dashed var(--color-dark-1);}
+/* 2025.05.16 Add End */
