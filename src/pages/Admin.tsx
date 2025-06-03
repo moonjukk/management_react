@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Menu from '../components/Menu';
+import { useNavigate } from 'react-router-dom';
 
 type SearchEngineSetting = {
   id: number;
@@ -13,17 +13,34 @@ type SearchEngineSetting = {
   imageYn: string;
   blogYn: string;
 };
-const colorOptions = ['GOLD', 'RED', 'GREEN', 'BLUE', 'BLACK', 'SILVER'];
+//const colorOptions = ['GOLD', 'RED', 'GREEN', 'BLUE', 'BLACK', 'SILVER'];
+const colorOptions = ['BLACK', 'WHITE'];
 const Admin: React.FC = () => {
 	const [settings, setSettings] = useState<SearchEngineSetting[]>([]);
 	const [editIndex, setEditIndex] = useState<number | null>(null);
+    useEffect(() => {
+        const idToken = localStorage.getItem("idToken");
+        if (!idToken) return;
 
-	useEffect(() => {
-		fetch("http://localhost:8080/api/settings/admin/1")
-		.then((res) => res.json())
-		.then((data) => setSettings(data))
-		.catch((err) => console.error(err));
-	}, []);
+        // idToken 보내서 사용자 ID 요청
+        fetch("http://localhost:8080/api/auth/getLoginInfo", {
+        credentials: 'include', // 세션 쿠키 포함
+        })
+        .then(res => {
+            if (!res.ok) throw new Error('Not logged in');
+            return res.json();
+        })
+        .then(user => {
+            const userId = user.id; // 백엔드 User 객체의 ID
+            return fetch(`http://localhost:8080/api/settings/admin/${userId}`);
+        })
+        .then(res => res.json())
+        .then(data => setSettings(data))
+        .catch(err => {
+            console.error(err);
+            // 필요 시 로그인 페이지로 이동 등 처리
+        });
+    }, []);
 
   	/**  */
 	const handleTitleChange = (index: number, value: string) => {
@@ -76,9 +93,19 @@ const Admin: React.FC = () => {
 		});
  	};
 
+	/** WebSearch 이동 */
+	const navigate = useNavigate();
+	const goToWebSearch = () => {
+		// 로컬 스토리지 저장
+		localStorage.setItem('titleNm', settings[0].titleNm);
+		localStorage.setItem('colorThemeNm', settings[0].colorThemeNm);
+
+		// 페이지 이동
+		navigate('/webSearch');
+	}
+
   	return (
 		<div>
-			<Menu />
 			<div className='adminBody'>
 				<h2>검색엔진 세팅 목록</h2>
 				{settings.map((s, index) => (
@@ -174,7 +201,7 @@ const Admin: React.FC = () => {
 						<p><strong>이미지 여부:</strong> {s.imageYn}</p>
 						<p><strong>블로그 여부:</strong> {s.blogYn}</p>
 						<button onClick={() => handleEditClick(index)}>수정</button>
-						<button>실행</button>
+						<button onClick={goToWebSearch}>실행</button>
 						</>
 					)}
 					</div>

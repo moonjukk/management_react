@@ -1,0 +1,157 @@
+/* 공통 스타일 */
+.google-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+.google-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 100px;
+}
+
+.google-logo-text {
+  font-size: 80px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  text-align: center;
+  user-select: none;
+}
+
+/* 검색창 */
+.search-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 600px;
+}
+
+.search-box {
+  width: 100%;
+  padding: 12px 20px;
+  border-radius: 24px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+/* 버튼 */
+.buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.buttons button {
+  padding: 10px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* 푸터 */
+.footer {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-left {
+  margin-bottom: 10px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 5px;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* 🌙 다크 모드 스타일 */
+.google-page.dark {
+  background: #202124;
+  color: white;
+}
+
+.google-page.dark .search-box {
+  background: #303134;
+  color: white;
+}
+
+.google-page.dark .buttons button {
+  background-color: #303134;
+  border: 1px solid #5f6368;
+  color: white;
+}
+
+.google-page.dark .buttons button:hover {
+  background-color: #3c4043;
+}
+
+.google-page.dark .footer {
+  background: #171717;
+}
+
+.google-page.dark .footer-links a {
+  color: #9aa0a6;
+}
+
+.google-page.dark .google-logo-text {
+  font-size: 80px;
+  font-weight: 600;
+  font-family: Arial, sans-serif;
+  color: white;
+  margin-bottom: 30px;
+  text-align: center;
+  user-select: none;
+}
+
+/* ☀️ 라이트 모드 스타일 */
+.google-page.light {
+  background: white;
+  color: black;
+}
+
+.google-page.light .search-box {
+  background: #f1f3f4;
+  color: black;
+}
+
+.google-page.light .buttons button {
+  background-color: #f8f9fa;
+  border: 1px solid #dadce0;
+  color: black;
+}
+
+.google-page.light .buttons button:hover {
+  background-color: #e8eaed;
+}
+
+.google-page.light .footer {
+  background: #f2f2f2;
+}
+
+.google-page.light .footer-links a {
+  color: #555;
+}
+
+.google-page.light .google-logo-text {
+  font-size: 80px;
+  font-weight: 600;
+  font-family: Arial, sans-serif;
+  color: rgb(99, 93, 104);
+  margin-bottom: 30px;
+  text-align: center;
+  user-select: none;
+}
+

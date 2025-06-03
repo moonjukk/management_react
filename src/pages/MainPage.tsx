@@ -1,53 +1,39 @@
-// src/pages/MainPage.tsx
 import React, { useState, useEffect } from 'react';
-import { GoogleLogin, googleLogout } from '@react-oauth/google';
-import Menu from '../components/Menu';
-import axios from 'axios';
-
+type LoginUserSetting = {
+  id: number;
+  email: String;
+  loginProvider: String;
+  name: String;
+}
 const MainPage: React.FC = () => {
     const [userLoggedIn, setUserLoggedIn] = useState(false);
+    const [loginUser, setLoginUser] = useState<LoginUserSetting>();
     useEffect(() => {
-        const token = localStorage.getItem('idToken');
-        if (token) {
-            setUserLoggedIn(true);
-            // 필요 시 서버에 토큰 검증 요청 가능
-        }
+        const idToken = localStorage.getItem("idToken");
+        if (!idToken) return;
+
+        // idToken 보내서 사용자 ID 요청
+        fetch("http://localhost:8080/api/auth/getLoginInfo", {
+        credentials: 'include', // 세션 쿠키 포함
+        })
+        .then(res => {
+            if (!res.ok) throw new Error('Not logged in');
+            return res.json();
+        })
+        .then(user => {
+            setLoginUser(user);
+        })
     }, []);
-
-    const handleSuccess = async (credentialResponse: any) => {
-        const idToken = credentialResponse.credential;
-        try {
-            const res = await axios.post(
-                'http://localhost:8080/api/auth/google-login',
-                { idToken },
-                { withCredentials: true } // 서버에서 쿠키 전달받기
-            );
-            console.log('로그인 성공:', res.data);
-            localStorage.setItem('idToken', idToken);
-            setUserLoggedIn(true);
-        } catch (err) {
-            console.error('서버 로그인 실패:', err);
-        }
-    };
-
-    const handleLogout = () => {
-        googleLogout();
-        localStorage.removeItem('idToken');
-        setUserLoggedIn(false);
-    };
 
     return (
         <div>
-        <Menu />
         <div className='adminBody'>
             <h1>메인 페이지</h1>
-            <div>
-                {!userLoggedIn ? (
-                    <GoogleLogin onSuccess={handleSuccess} onError={() => console.log('Login Failed')} />
+            {loginUser ? (
+                <span>{loginUser.name} 님, 환영합니다!</span>
                 ) : (
-                    <button onClick={handleLogout}>로그아웃</button>
-                )}
-            </div>
+                <span>로그인이 필요합니다.</span>
+            )}
         </div>
         </div>
     );

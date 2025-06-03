@@ -26,3 +26,7 @@ body{
 .nav a:hover{
     color: rgb(105, 105, 105);
 }
+
+.GoogleLogin{
+    margin-top: 3px;
+}
