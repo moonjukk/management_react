@@ -9,8 +9,9 @@ import { GoogleOAuthProvider, GoogleLogin, googleLogout } from '@react-oauth/goo
 import axios from 'axios';
 import MainPage from './pages/MainPage';
 import Admin from './pages/Admin';
-import WebSearch from './pages/webSearch';
+import WebSearch from './pages/WebSearch';
 import WebSearchDetail from './pages/WebSearchDetail';
+import News from './pages/News';
 import './css/common.css';
 import './css/admin.css';
 
@@ -28,6 +29,7 @@ const AppContent: React.FC<{
         <nav className='nav'>
           <li><a href="/">메인</a></li>
           <li><a href="/admin">엔진관리</a></li>
+          <li><a href="/news">뉴스탭관리</a></li>
           <div>
             {!userLoggedIn ? (
               <li className='GoogleLogin'>
@@ -49,6 +51,7 @@ const AppContent: React.FC<{
         <Route path="/admin" element={<Admin />} />
         <Route path="/webSearch" element={<WebSearch />} />
         <Route path="/webSearchDetail" element={<WebSearchDetail />} />
+        <Route path="/news" element={<News />} />
       </Routes>
     </>
   );
